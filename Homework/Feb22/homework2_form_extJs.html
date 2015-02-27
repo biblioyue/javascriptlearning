@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="http://cdn.sencha.com/ext/gpl/4.2.1/resources/css/ext-all-neptune-debug.css">
+        <script src="http://cdn.sencha.com/ext/gpl/4.2.1/ext-all.js"></script>
+
+        <script>
+            Ext.application({
+            requires: ['Ext.form.Panel'],
+            name: 'form',
+            launch: function () {
+        
+            Ext.create('Ext.form.Panel', {
+            renderTo: Ext.getBody(),
+            title: 'User Form',
+            height: 130,
+            width: 280,
+            bodyPadding: 10,
+            defaultType: 'textfield',
+            items: [
+             {
+               fieldLabel: 'First Name',
+               name: 'firstName'
+             },
+            {
+              fieldLabel: 'Last Name',
+              name: 'lastName'
+           },
+
+          ]
+   });
+
+   }
+});
+            
+        </script>
+    </head>
+    <body></body>
+</html>
