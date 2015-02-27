@@ -5,12 +5,11 @@
 <html>
 <body>
 
-<div>second largest <p id="result"> </p></div>
-
+<div>Second largest number is <p id="result"> </p></div>
 
 <script>
   function foo(arr) {
-   var max1=-1,  max2=-1;
+   var max1=-Infinity,  max2=-Infinity;
       arr.forEach(function(num){
           if (num>Math.min(max1,max2))
           {
@@ -18,16 +17,12 @@
                max1=num;
               }else{
                 max2=num;
-              }
-          }
-    console.log(max1+"--"+max2);
-        
-  
-   });
+              }          
+          }});
        return Math.min(max1,max2);
   }
-      
- var arr=[3,5,9,0,8,5];
+                  
+ var arr=[1,1,0];
   document.getElementById("result").innerHTML = foo(arr);
 </script>
 

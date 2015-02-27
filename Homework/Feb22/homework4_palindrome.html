@@ -5,14 +5,15 @@
 <html>
 <body>
 
-<p id="demo">A nut for a jar of tuna is palindrome ?</p>
+<p id="demo">A nut for a jar of tuna</p> is Palindrome?
 <p id="result"></p> 
 
 <script>
   function isPalindrome(str) {
     return str.toLowerCase().replace(/\s/g, "")==str.toLowerCase().replace(/\s/g, "").split("").reverse().join("");
 }
-  document.getElementById("result").innerHTML = isPalindrome("A nut for a jar of tuna");
+    var str=document.getElementById("demo").innerHTML;
+  document.getElementById("result").innerHTML = isPalindrome(str);
 </script>
 
 </body>
