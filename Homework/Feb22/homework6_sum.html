@@ -5,14 +5,16 @@
 <html>
 <body>
 
-<p id="demo">sum of 3,4</p>
+<p id="demo">sum(3)(4)</p>
 <p id="result"></p> 
 
 <script>
-  var sum=function(a,b) {
-   return a+b;
+  var sum=function(a) {
+   return function(b){
+      return a+b;
+   }
 }
-  document.getElementById("result").innerHTML = sum(3,4);
+  document.getElementById("result").innerHTML = sum(3)(4);
 </script>
 
 </body>
